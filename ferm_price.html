@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>ЗТТА - Прайс-лист</title>
+    <link rel="icon" href="images/logo.png">
+    <link rel="stylesheet" type="text/css" href="css/jquery.dataTables.min.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/custom.css">
+    <script src="scripts/popper.min.js"></script>
+    <script src="scripts/jquery-3.3.1.min.js"></script>
+    <script src="scripts/jquery.dataTables.min.js"></script>
+    <script src="scripts/bootstrap.min.js"></script>
+    <script src="scripts/custom.js"></script>
+</head>
+<body onload="startPoint()">
+    <div class="container" id="info_table">
+        <div class="alert alert-primary" id="expdate" role="alert"></div>
+        <p>
+            <button class="btn btn-outline-primary" type="button" data-toggle="collapse" data-target="#collapseFM" aria-expanded="false" aria-controls="collapseExample">
+                Тех. документация ФМ
+            </button>
+            <button class="btn btn-outline-primary" type="button" data-toggle="collapse" data-target="#collapseFMA" aria-expanded="false" aria-controls="collapseExample">
+                Тех. документация ФМА
+            </button>
+        </p>
+        <div class="collapse" id="collapseFM">
+            <a class="btn btn-outline-secondary" href="https://ztta.kg/static/fm/FM125.pdf" target="_blank" role="button">ФМ 125</a>
+            <a class="btn btn-outline-secondary" href="https://ztta.kg/static/fm/FM150.pdf" target="_blank" role="button">ФМ 150</a>
+            <a class="btn btn-outline-secondary" href="https://ztta.kg/static/fm/FM200.pdf" target="_blank" role="button">ФМ 200</a>
+            <a class="btn btn-outline-secondary" href="https://ztta.kg/static/fm/FM250.pdf" target="_blank" role="button">ФМ 250</a>
+            <a class="btn btn-outline-secondary" href="https://ztta.kg/static/fm/FM300.pdf" target="_blank" role="button">ФМ 300</a>
+            <a class="btn btn-outline-secondary" href="https://ztta.kg/static/fm/FM400.pdf" target="_blank" role="button">ФМ 400</a>
+            <a class="btn btn-outline-secondary" href="https://ztta.kg/static/fm/FM500.pdf" target="_blank" role="button">ФМ 500</a>
+        </div>
+        <div class="collapse" id="collapseFMA">
+            <!--div class="btn-group" role="group" aria-label="Button group with nested dropdown"-->
+                <div class="btn-group" role="group">
+                    <button id="fma125" type="button" class="btn btn-outline-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        ФМА 125
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                        <a class="dropdown-item" target="_blank" href="https://ztta.kg/static/fma/FMA125_R3.pdf">R3</a>
+                    </div>
+                </div>
+
+                <div class="btn-group" role="group">
+                    <button id="fma150" type="button" class="btn btn-outline-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        ФМА 150
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                        <a class="dropdown-item" target="_blank" href="https://ztta.kg/static/fma/FMA150_R6.pdf">R6</a>
+                        <a class="dropdown-item" target="_blank" href="https://ztta.kg/static/fma/FMA150_R9.pdf">R9</a>
+                    </div>
+                </div>
+
+                <div class="btn-group" role="group">
+                    <button id="fma200" type="button" class="btn btn-outline-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        ФМА 200
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                        <a class="dropdown-item" target="_blank" href="https://ztta.kg/static/fma/FMA200_R6.pdf">R6</a>
+                        <a class="dropdown-item" target="_blank" href="https://ztta.kg/static/fma/FMA200_R9.pdf">R9</a>
+                        <a class="dropdown-item" target="_blank" href="https://ztta.kg/static/fma/FMA200_R12.pdf">R12</a>
+                    </div>
+                </div>
+
+                <div class="btn-group" role="group">
+                    <button id="fma250" type="button" class="btn btn-outline-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        ФМА 250
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                        <a class="dropdown-item" target="_blank" href="https://ztta.kg/static/fma/FMA250_R6.pdf">R6</a>
+                        <a class="dropdown-item" target="_blank" href="https://ztta.kg/static/fma/FMA250_R9.pdf">R9</a>
+                        <a class="dropdown-item" target="_blank" href="https://ztta.kg/static/fma/FMA250_R12.pdf">R12</a>
+                        <a class="dropdown-item" target="_blank" href="https://ztta.kg/static/fma/FMA250_R15.pdf">R15</a>
+                    </div>
+                </div>
+
+                <div class="btn-group" role="group">
+                    <button id="fma300" type="button" class="btn btn-outline-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        ФМА 300
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                        <a class="dropdown-item" target="_blank" href="https://ztta.kg/static/fma/FMA300_R12.pdf">R12</a>
+                        <a class="dropdown-item" target="_blank" href="https://ztta.kg/static/fma/FMA300_R15.pdf">R15</a>
+                        <a class="dropdown-item" target="_blank" href="https://ztta.kg/static/fma/FMA300_R18.pdf">R18</a>
+                    </div>
+                </div>
+            <!--/div-->
+        </div>
+    </div>
+    <div class="container" id="main_table"></div>
+</body>
+</html>
